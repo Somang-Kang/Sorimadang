@@ -16,10 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
-    int USERNAME = 0; //test
-    char Test; //test
-    int test=1; //test
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
