@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Sorimadang</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_instrument">Instrument</string>
+    <string name="title_song">Song</string>
+    <string name="title_mypage">MyPage</string>
 </resources>

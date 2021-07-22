@@ -12,14 +12,19 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_instrument"
         android:name="org.techtown.sorimadang.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_instrument"
+        tools:layout="@layout/fragment_instrument" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_song"
         android:name="org.techtown.sorimadang.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="@string/title_song"
+        tools:layout="@layout/fragment_song" />
+
+    <!--
+    프래그먼트 파일들이 어디있는지 모르겠다!!! 확인해보기기
+   -->
+
 </navigation>
