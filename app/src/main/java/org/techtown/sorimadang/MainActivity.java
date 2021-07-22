@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import org.techtown.sorimadang.R;
 import org.techtown.sorimadang.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
