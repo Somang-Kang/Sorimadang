@@ -9,19 +9,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View.OnFocusChangeListener;
 
-public class SignUpActivity<id_input> extends AppCompatActivity {
-
+public class SignUpActivity extends AppCompatActivity {
+    EditText id_input, pw_input, pwCheck_input;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-    }
 
-    EditText id_input=(EditText) findViewById(R.id.SignUpIDeditText);
-    EditText pw_input=findViewById(R.id.SignUpPWeditText);
-    EditText pwCheck_input=findViewById(R.id.PWCheckeditText);
+        id_input=findViewById(R.id.SignUpIDeditText);
+        pw_input=findViewById(R.id.SignUpPWeditText);
+        pwCheck_input=findViewById(R.id.PWCheckeditText);
+
+
+    }
 
     TextView idNotice=findViewById(R.id.SignUpIDNotice);
     TextView pwNotice=findViewById(R.id.SignUpPWNotice);
@@ -45,7 +47,19 @@ public class SignUpActivity<id_input> extends AppCompatActivity {
     *
      */
  //id_input.getText().toString();
-   // id_input.setOnFocusChangeListener(new View.OnFocusChangeListener(){});
+    id_input.setOnFocusChangeListener(new OnFocusChangeListener() {
+        public void onFocusChange(View v, boolean gainFocus) {
+            //포커스가 주어졌을 때 동작
+            if (gainFocus) {
+                //to do
+                //원하는 동작
+            }
+            //포커스를 잃었을 때의 동작
+            else {
+                //원하는 동작
+            }
+        }
+    });
 
     /*
     * 2. 버튼 누르면 edittext의 값 가져옴.
