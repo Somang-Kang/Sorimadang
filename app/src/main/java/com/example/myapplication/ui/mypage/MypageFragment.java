@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.annotation.SuppressLint;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
@@ -24,7 +25,7 @@ import com.example.myapplication.databinding.FragmentMypageBinding;
 
 public class MypageFragment extends Fragment {
 
-    View view;
+
     private FragmentMypageBinding binding;
     private MypageViewModel mypageViewModel;
     private ImageView halfpeng_img;
@@ -36,21 +37,28 @@ public class MypageFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        halfpeng_img = (ImageView) getView().findViewById(R.id.peng_half_image);
-        halfpeng_img.setBackground(new ShapeDrawable(new OvalShape()));
-        halfpeng_img.setClipToOutline(true);
+                            @Nullable Bundle savedInstanceState) {
+
+       // View view=inflater.inflate(R.id.navigation_mypage,container,false);
+
+        //halfpeng_img = (ImageView) getView().findViewById(R.id.peng_half_image);
+        //halfpeng_img.setBackground(new ShapeDrawable(new OvalShape()));
+        //halfpeng_img.setClipToOutline(true);
         mypageViewModel =
                 new ViewModelProvider(this).get(MypageViewModel.class);
 
         binding = FragmentMypageBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView view = binding.mypageTextview;
+        halfpeng_img = getView().findViewById(R.id.peng_half_image);
+        halfpeng_img.setBackground(new ShapeDrawable(new OvalShape()));
+        halfpeng_img.setClipToOutline(true);
+
+       final TextView tview = binding.mypageTextview;
         mypageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                view.findViewById(R.id.mypage_textview);
+                final View viewById = tview.findViewById(R.id.mypage_textview);
             }
         });
         return root;
