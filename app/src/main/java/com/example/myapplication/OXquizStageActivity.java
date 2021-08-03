@@ -43,15 +43,24 @@ public class OXquizStageActivity extends AppCompatActivity {
         //rightOimg.setVisibility(View.VISIBLE); //화면에서 보이게 하는거->정답일때 보이게 할 수 있음
 
         true_animation = findViewById(R.id.lottie_true);
-        true_animation.setAnimation("tickgreen.json");
-        true_animation.playAnimation();
-        true_animation.setRepeatCount(3);
 
+        oBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                //true_animation.setAnimation("tickgreen.json");
+                //true_animation.playAnimation();
+                true_animation.setRepeatCount(3);
+            }
+        });
+
+/*
         false_animation = findViewById(R.id.lottie_false);
         false_animation.setAnimation("signforerrorflatstyle.json");
         false_animation.playAnimation();
         false_animation.setRepeatCount(3);
-
+*/
 
 
 
