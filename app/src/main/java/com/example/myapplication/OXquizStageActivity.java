@@ -124,6 +124,8 @@ public class OXquizStageActivity extends AppCompatActivity {
 //                }
 //            }
 //        };
+
+
 //        timer.schedule(task, 0, 1000); //실행 Task, 0초뒤 실행, 10초마다 반복
 
         TimerTask timerTask = new TimerTask() {
@@ -166,11 +168,9 @@ public class OXquizStageActivity extends AppCompatActivity {
                 if(num>20){
                     timer.cancel();
                 }else{
-                    if(count<10) {
-                        count = 1;
-                    }
+//
                     OXtime.setText(String.valueOf(num));//OXtime.setText(String.valueOf(num));
-                    count++;
+
                     num++;
                     Log.v("update반복 count",String.valueOf(count));
                 }
