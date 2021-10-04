@@ -257,7 +257,7 @@ public class OXquizStageActivity extends AppCompatActivity {
                                 JSONObject reqtoServer=new JSONObject();
                                 reqtoServer.put("idToken",userIdToken);
                                 reqtoServer.put("stage_num",stageNum);
-                                reqtoServer.put("quiz_num",(userquizNum+1));
+                                reqtoServer.put("quiz_num",userquizNum);
                                 String res= action.post(reqtoServer.toString(),"http://sorimadang.shop/api/ox-game/wrong-questions/save");
 
                                 if(res != null){
