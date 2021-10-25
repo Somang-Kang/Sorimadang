@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.myapplication.ui.mypage.MypageFragment;
 
 public class OXquizResultActivity extends AppCompatActivity {
 
@@ -22,6 +25,8 @@ public class OXquizResultActivity extends AppCompatActivity {
 
     TextView OXresultstage;
     ImageView OXresultback;
+
+    static String userIdToken = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +92,16 @@ public class OXquizResultActivity extends AppCompatActivity {
         wrong_answer_BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //오답노트 화면
-                Intent stageIntent = new Intent(OXquizResultActivity.this, OXwrongAnswerActivity.class);
-                startActivity(stageIntent);
+                userIdToken = ( (UserIdApplication) getApplication() ).getId();
+
+                if(userIdToken != null){
+                    //오답노트 화면
+                    Intent stageIntent = new Intent(OXquizResultActivity.this, OXwrongAnswerActivity.class);
+                    startActivity(stageIntent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "로그인 먼저 해주세요",Toast.LENGTH_SHORT).show();
+                }
            }
         });
 
