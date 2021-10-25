@@ -1,10 +1,12 @@
 package com.example.myapplication;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,16 +17,18 @@ import android.widget.TextView;
 
 import com.example.myapplication.ui.Instrument.InstrumentFragment;
 import com.bumptech.glide.Glide;
-import com.example.myapplication.ui.Instrument.InstrumentFragment;
 import com.example.myapplication.ui.Instrument.InstrumentFragment.gugakgiApi;
+import android.speech.tts.TextToSpeech;
 
 import java.io.IOException;
+import java.util.Locale;
 
-public class InstStudyActivity extends AppCompatActivity {
+public class InstStudyActivity extends AppCompatActivity implements TextToSpeech.OnInitListener{
 
     TextView ghtWhat, akgi;
     int whatAkgi; //1이면 관악기, 2이면 현악기, 3이면 타악기
-    int akgiNum; //악기이름
+    int akgiNum; //악기 넘버
+    String akgiName; //악기 이름
     ImageView akgiImg;
 
     Button bt1, bt2, bt3, bt4;
@@ -33,6 +37,9 @@ public class InstStudyActivity extends AppCompatActivity {
     int pos; //재생 멈춘 시점
     SeekBar sb; //음악 재생위치 - 시크바
     boolean isPlaying = false; //재생중인지 확인
+
+    private TextToSpeech tts;
+    private Button ttsBT;
 
     class MyThread extends Thread {
         @Override
@@ -62,8 +69,11 @@ public class InstStudyActivity extends AppCompatActivity {
 
         bt1 = findViewById(R.id.instStudybt);
         bt2 = findViewById(R.id.instStudybt2);
+        bt2.setVisibility(View.INVISIBLE);
         bt3 = findViewById(R.id.instStudybt3);
+        bt3.setVisibility(View.INVISIBLE);
         bt4 = findViewById(R.id.instStudybt4);
+        bt4.setVisibility(View.INVISIBLE);
         sb = findViewById(R.id.instStudyseekBar);
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onStopTrackingTouch(SeekBar seekBar) {
@@ -93,18 +103,21 @@ public class InstStudyActivity extends AppCompatActivity {
         //클래스에서 악기 찾아서 그림 표시, 소리표시
         if(whatAkgi==1){
             //관악기
-            akgi.setText(gugakgiApi.akgiNameG[akgiNum]);
+            akgiName = gugakgiApi.akgiNameG[akgiNum];
+            akgi.setText(akgiName);
             //ghtWhat.setText("관악기");
             Glide.with(this).load(gugakgiApi.imgUrlG[akgiNum]).override(800,750).into(akgiImg);
             url = gugakgiApi.soundUrlG[akgiNum]; // your URL here
         }else if(whatAkgi==2){
             //현악기
-            akgi.setText(gugakgiApi.akgiNameH[akgiNum]);
+            akgiName = gugakgiApi.akgiNameH[akgiNum];
+            akgi.setText(akgiName);
             Glide.with(this).load(gugakgiApi.imgUrlH[akgiNum]).override(800,750).into(akgiImg);
             url = gugakgiApi.soundUrlH[akgiNum];
         }else if(whatAkgi==3){
             //타악기
-            akgi.setText(gugakgiApi.akgiNameT[akgiNum]);
+            akgiName = gugakgiApi.akgiNameT[akgiNum];
+            akgi.setText(akgiName);
             Glide.with(this).load(gugakgiApi.imgUrlT[akgiNum]).override(800,750).into(akgiImg);
             url = gugakgiApi.soundUrlT[akgiNum];
         }
@@ -169,6 +182,16 @@ public class InstStudyActivity extends AppCompatActivity {
             }
         });
 
+        tts = new TextToSpeech(this, this);
+        ttsBT = findViewById(R.id.instStudybt5);
+        ttsBT.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View v) {
+                speakOut();
+                //출처: https://ebbnflow.tistory.com/188 [Dev Log : 삶은 확률의 구름]
+            }
+        });
     } //end of onCreate
 
     @Override
@@ -187,4 +210,39 @@ public class InstStudyActivity extends AppCompatActivity {
     public void InstbackActivity(View view) {
         startActivity(new Intent(InstStudyActivity.this, InstrumentFragment.class));
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private void speakOut() {
+        CharSequence text = akgiName;
+        tts.setPitch((float) 0.6);
+        tts.setSpeechRate((float) 0.1);
+        tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"id1");
+    }
+    @Override
+    public void onDestroy() {
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        } super.onDestroy();
+    }
+
+    //InstStudyActivity.java가 처음 시작할 때 무조건 speakOut하도록 하는 코드
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            int result = tts.setLanguage(Locale.KOREA);
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "This Language is not supported");
+            } else {
+                ttsBT.setEnabled(true);
+                Log.e("TTS", "Initilization Start!");
+                //speakOut();
+            }
+        } else {
+            Log.e("TTS", "Initilization Failed!");
+        }
+    }
+
+
 }
