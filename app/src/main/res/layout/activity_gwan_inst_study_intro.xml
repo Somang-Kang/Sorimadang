@@ -31,236 +31,368 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/G_bt"
-        android:layout_width="100dp"
+    <ImageView
+        android:id="@+id/G_imageView"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_instTextView3"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
         android:text="당피리"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_instTextView3" />
-
-    <Button
-        android:id="@+id/G_bt2"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView" />
+
+    <ImageView
+        android:id="@+id/G_imageView2"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_instTextView3"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="단소"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_instTextView3" />
-
-    <Button
-        android:id="@+id/G_bt3"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView2"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView2" />
+
+    <ImageView
+        android:id="@+id/G_imageView3"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_instTextView3"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="향피리"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_instTextView3" />
-
-    <Button
-        android:id="@+id/G_bt4"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView3"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView3" />
+
+    <ImageView
+        android:id="@+id/G_imageView4"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="정악대금"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt" />
-
-    <Button
-        android:id="@+id/G_bt5"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView4"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView4" />
+
+    <ImageView
+        android:id="@+id/G_imageView5"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView2"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="지"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt2" />
-
-    <Button
-        android:id="@+id/G_bt6"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView5"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView5" />
+
+    <ImageView
+        android:id="@+id/G_imageView6"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView3"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="나발"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt3" />
-
-    <Button
-        android:id="@+id/G_bt7"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView6"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView6" />
+
+    <ImageView
+        android:id="@+id/G_imageView7"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView4"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="나각"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt4" />
-
-    <Button
-        android:id="@+id/G_bt8"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView7"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView7" />
+
+    <ImageView
+        android:id="@+id/G_imageView8"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView5"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="생황"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt5" />
-
-    <Button
-        android:id="@+id/G_bt9"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView8"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView8" />
+
+    <ImageView
+        android:id="@+id/G_imageView9"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView6"
+        app:srcCompat="@drawable/peng_half"/>
+
+    <TextView
+        android:id="@+id/G_textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="산조대금"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt6" />
-
-    <Button
-        android:id="@+id/G_bt10"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView9"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView9" />
+
+    <ImageView
+        android:id="@+id/G_imageView10"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView7"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="세피리"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt7" />
-
-    <Button
-        android:id="@+id/G_bt11"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView10"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView10" />
+
+    <ImageView
+        android:id="@+id/G_imageView11"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView8"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="소"
         android:textColor="@color/black"
-        android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt8" />
-
-    <Button
-        android:id="@+id/G_bt12"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="소금"
-        android:textColor="@color/black"
         android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView11"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView11" />
+
+    <ImageView
+        android:id="@+id/G_imageView12"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt9" />
+        app:layout_constraintTop_toBottomOf="@+id/G_textView9"
+        app:srcCompat="@drawable/peng_half" />
 
-    <Button
-        android:id="@+id/G_bt13"
-        android:layout_width="100dp"
+    <TextView
+        android:id="@+id/G_textView12"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="태평소"
+        android:layout_marginTop="10dp"
+        android:text="소금"
         android:textColor="@color/black"
+        android:fontFamily="@font/imhyeminbold"
         android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView12"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView12" />
+
+    <ImageView
+        android:id="@+id/G_imageView13"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt10" />
+        app:layout_constraintTop_toBottomOf="@+id/G_textView10"
+        app:srcCompat="@drawable/peng_half" />
 
-    <Button
-        android:id="@+id/G_bt14"
-        android:layout_width="100dp"
+    <TextView
+        android:id="@+id/G_textView13"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
+        android:text="태평소"
+        android:textColor="@color/black"
         android:fontFamily="@font/imhyeminbold"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:onClick="btnClickGwan"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView13"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView13" />
+
+    <ImageView
+        android:id="@+id/G_imageView14"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClickGwan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_textView11"
+        app:srcCompat="@drawable/peng_half" />
+
+    <TextView
+        android:id="@+id/G_textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="퉁소"
         android:textColor="@color/black"
+        android:fontFamily="@font/imhyeminbold"
         android:onClick="btnClickGwan"
-        app:backgroundTint="#C4DFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_bt11" />
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/G_imageView14"
+        app:layout_constraintStart_toStartOf="@+id/G_imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/G_imageView14" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
