@@ -30,23 +30,79 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/instStudyTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instStudyTextView1" />
-
     <ImageView
-        android:id="@+id/instStudyAkgi"
+        android:id="@+id/instStudyAkgiImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instStudyTextView2"
+        app:layout_constraintTop_toBottomOf="@+id/instStudyTextView1"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/instStudybt"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/imhyeminbold"
+        android:text="재생"
+        android:textSize="6pt"
+        app:backgroundTint="#C4DFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instStudyAkgiImageView" />
+
+    <Button
+        android:id="@+id/instStudybt2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/imhyeminbold"
+        android:text="일시정지"
+        android:textSize="6pt"
+        app:backgroundTint="#C4DFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instStudyAkgiImageView" />
+
+    <Button
+        android:id="@+id/instStudybt3"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/imhyeminbold"
+        android:text="재시작"
+        android:textSize="6pt"
+        app:backgroundTint="#C4DFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instStudyAkgiImageView" />
+
+    <Button
+        android:id="@+id/instStudybt4"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/imhyeminbold"
+        android:text="종료"
+        android:textSize="6pt"
+        app:backgroundTint="#C4DFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instStudyAkgiImageView" />
+
+    <SeekBar
+        android:id="@+id/instStudyseekBar"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instStudyAkgiImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

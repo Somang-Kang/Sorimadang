@@ -56,53 +56,53 @@ public class HyunInstStudyIntro extends AppCompatActivity {
 
     public void btnClickHyun(View view){
         if(view.getId()==R.id.H_imageView || view.getId()==R.id.H_textView){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h1.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent1 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent1.putExtra("whatAkgi",1);
-//            intent1.putExtra("akgi",g1.getText());
-//            startActivity(intent1);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h1.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent1 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent1.putExtra("whatAkgi",1);
+            intent1.putExtra("akgi",0);
+            startActivity(intent1);
         }else if(view.getId()==R.id.H_imageView2 || view.getId()==R.id.H_textView2){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h2.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent2 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent2.putExtra("whatAkgi",1);
-//            intent2.putExtra("akgi",g2.getText());
-//            startActivity(intent2);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h2.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent2 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent2.putExtra("whatAkgi",1);
+            intent2.putExtra("akgi",1);
+            startActivity(intent2);
         }else if(view.getId()==R.id.H_imageView3 || view.getId()==R.id.H_textView3){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h3.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent3 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent3.putExtra("whatAkgi",1);
-//            intent3.putExtra("akgi",g3.getText());
-//            startActivity(intent3);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h3.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent3 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent3.putExtra("whatAkgi",1);
+            intent3.putExtra("akgi",2);
+            startActivity(intent3);
         }else if(view.getId()==R.id.H_imageView4 || view.getId()==R.id.H_textView4){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h4.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent4 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent4.putExtra("whatAkgi",1);
-//            intent4.putExtra("akgi",g4.getText());
-//            startActivity(intent4);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h4.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent4 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent4.putExtra("whatAkgi",1);
+            intent4.putExtra("akgi",3);
+            startActivity(intent4);
         }else if(view.getId()==R.id.H_imageView5 || view.getId()==R.id.H_textView5){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h5.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent5 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent5.putExtra("whatAkgi",1);
-//            intent5.putExtra("akgi",g5.getText());
-//            startActivity(intent5);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h5.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent5 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent5.putExtra("whatAkgi",1);
+            intent5.putExtra("akgi",4);
+            startActivity(intent5);
         }else if(view.getId()==R.id.H_imageView6 || view.getId()==R.id.H_textView6){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h6.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent6 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent6.putExtra("whatAkgi",1);
-//            intent6.putExtra("akgi",g6.getText());
-//            startActivity(intent6);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h6.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent6 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent6.putExtra("whatAkgi",1);
+            intent6.putExtra("akgi",5);
+            startActivity(intent6);
         }else if(view.getId()==R.id.H_imageView7 || view.getId()==R.id.H_textView7){
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h7.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent7 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent7.putExtra("whatAkgi",1);
-//            intent7.putExtra("akgi",g7.getText());
-//            startActivity(intent7);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h7.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent7 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent7.putExtra("whatAkgi",1);
+            intent7.putExtra("akgi",6);
+            startActivity(intent7);
         }else{
-            Toast.makeText(getApplicationContext(), "버튼 눌림"+h8.getText(),Toast.LENGTH_SHORT).show();
-//            Intent intent8 = new Intent(GwanInstStudyIntro.this, InstStudyActivity.class);
-//            intent8.putExtra("whatAkgi",1);
-//            intent8.putExtra("akgi",g8.getText());
-//            startActivity(intent8);
+            //Toast.makeText(getApplicationContext(), "버튼 눌림"+h8.getText(),Toast.LENGTH_SHORT).show();
+            Intent intent8 = new Intent(HyunInstStudyIntro.this, InstStudyActivity.class);
+            intent8.putExtra("whatAkgi",1);
+            intent8.putExtra("akgi",7);
+            startActivity(intent8);
         }
     }
 
