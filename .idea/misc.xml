@@ -25,7 +25,9 @@
         <entry key="..\:/a_hm/project/probono_ICT_2021(1)/MyApplication/app/src/main/res/layout/fragment_instrument.xml" value="0.2421875" />
         <entry key="..\:/a_hm/project/probono_ICT_2021(1)/MyApplication/app/src/main/res/layout/fragment_mypage.xml" value="0.2421875" />
         <entry key="..\:/a_hm/project/probono_ICT_2021(1)/MyApplication/app/src/main/res/layout/listview_custom.xml" value="0.2421875" />
+        <entry key="app/src/main/res/drawable/button_circle_little.xml" value="0.15625" />
         <entry key="app/src/main/res/drawable/circle_view.xml" value="0.12638888888888888" />
+        <entry key="app/src/main/res/drawable/minyo_rectangle.xml" value="0.15625" />
         <entry key="app/src/main/res/drawable/rectangle_border.xml" value="0.12638888888888888" />
         <entry key="app/src/main/res/layout/activity_instrument_quiz_intro.xml" value="0.13322368421052633" />
         <entry key="app/src/main/res/layout/activity_instrument_quiz_result.xml" value="0.335" />
@@ -36,7 +38,10 @@
         <entry key="app/src/main/res/layout/activity_oxquiz_stage.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.11282894736842106" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.11282894736842106" />
+        <entry key="app/src/main/res/layout/fragment_instrument.xml" value="0.15526315789473685" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.10450819672131148" />
+        <entry key="app/src/main/res/layout/fragment_song.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/test_layout.xml" value="0.15526315789473685" />
       </map>
     </option>
   </component>

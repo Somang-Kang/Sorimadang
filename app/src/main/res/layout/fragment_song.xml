@@ -1,24 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.song.SongFragment">
 
-    <TextView
-        android:id="@+id/text_song"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/minyo_title_img" />
+
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:text="경기민요" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/minyo_rectangle"
+                android:elevation="20dp"
+                android:text="꼭두각시"
+                android:textColor="#1E1B17"
+                android:textSize="17sp"
+                app:backgroundTint="@null"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/bt1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/minyo_rectangle"
+                android:text="닐리리야"
+                android:textColor="#1E1B17"
+                android:textSize="17sp"
+                app:backgroundTint="@null"
+                app:strokeColor="#000000" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:text="남도민요" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="민요학습 프래그먼트입니다."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt2_1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:elevation="20dp"
+            android:text="강강술래"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/bt2_2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:text="진도아리랑"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="#000000" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:text="제주민요" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt3_1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:elevation="20dp"
+            android:text="너영나영"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/bt3_2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:text="오돌또기"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="#000000" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:text="서도민요" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt4_1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:elevation="20dp"
+            android:text="몽금포타령"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/bt4_2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:text="해주아리랑"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="#000000" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/text_5"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:text="동부민요" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt5_1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:elevation="20dp"
+            android:text="뱃노래"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/bt5_2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/minyo_rectangle"
+            android:text="밀양아리랑"
+            android:textColor="#1E1B17"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:strokeColor="#000000" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
