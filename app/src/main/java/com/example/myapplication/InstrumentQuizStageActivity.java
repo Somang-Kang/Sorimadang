@@ -25,6 +25,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -67,9 +69,12 @@ public class InstrumentQuizStageActivity extends AppCompatActivity {
     boolean isNext;
     int prob_num = 1;
     int stage;
+    int right_ans_num = 0;
     TextView level_text;
     Random random = new Random();
     Button pass_bt;
+    LottieAnimationView true_animation, false_animation;
+    int isTrueLottie = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -178,19 +183,37 @@ public class InstrumentQuizStageActivity extends AppCompatActivity {
     public void PassButton(View view){
         prob_num++;
         if(stage == 1 && prob_num == 4){
-            startActivity(new Intent(InstrumentQuizStageActivity.this, InstrumentQuizResultActivity.class));
+            Intent intent01 = new Intent(this, InstrumentQuizResultActivity.class);
+            intent01.putExtra("right_ans", right_ans_num);
+            intent01.putExtra("stage",stage);
+            startActivity(intent01);
         }
         else if(stage == 2 && prob_num == 5){
-            startActivity(new Intent(InstrumentQuizStageActivity.this, InstrumentQuizResultActivity.class));
+            Intent intent01 = new Intent(this, InstrumentQuizResultActivity.class);
+            intent01.putExtra("right_ans", right_ans_num);
+            intent01.putExtra("stage",stage);
+            startActivity(intent01);
         }
         else if(stage == 3 && prob_num == 6){
-            startActivity(new Intent(InstrumentQuizStageActivity.this, InstrumentQuizResultActivity.class));
+            Intent intent01 = new Intent(this, InstrumentQuizResultActivity.class);
+            intent01.putExtra("right_ans", right_ans_num);
+            intent01.putExtra("stage",stage);
+            startActivity(intent01);
         }
         else{
             curValue = random.nextInt(30);
             stt_view.setText("  ");
             speech_button.setText("정답말하기");
             isNext = false;
+            if(isTrueLottie == 1){
+                true_animation.setVisibility(View.GONE);
+            }
+            else if(isTrueLottie == 0){
+                false_animation.setVisibility(View.GONE);
+            }
+            else{
+                isTrueLottie = 2;
+            }
         }
     }
 
@@ -199,19 +222,35 @@ public class InstrumentQuizStageActivity extends AppCompatActivity {
             prob_num++;
             speech_button.setBackgroundColor(Color.parseColor("#FFCB69"));
             if(stage == 1 && prob_num == 4){
-                startActivity(new Intent(InstrumentQuizStageActivity.this, InstrumentQuizResultActivity.class));
-            }
+                Intent intent01 = new Intent(this, InstrumentQuizResultActivity.class);
+                intent01.putExtra("right_ans", right_ans_num);
+                intent01.putExtra("stage",stage);
+                startActivity(intent01);            }
             else if(stage == 2 && prob_num == 5){
-                startActivity(new Intent(InstrumentQuizStageActivity.this, InstrumentQuizResultActivity.class));
-            }
+                Intent intent01 = new Intent(this, InstrumentQuizResultActivity.class);
+                intent01.putExtra("right_ans", right_ans_num);
+                intent01.putExtra("stage",stage);
+                startActivity(intent01);            }
             else if(stage == 3 && prob_num == 6){
-                startActivity(new Intent(InstrumentQuizStageActivity.this, InstrumentQuizResultActivity.class));
-            }
+                Intent intent01 = new Intent(this, InstrumentQuizResultActivity.class);
+                intent01.putExtra("right_ans", right_ans_num);
+                intent01.putExtra("stage",stage);
+                startActivity(intent01);            }
             else{
                 curValue = random.nextInt(30);
                 stt_view.setText("  ");
                 speech_button.setText("정답말하기");
                 isNext = false;
+                if(isTrueLottie == 1){
+                    true_animation.setVisibility(View.GONE);
+
+                }
+                else if(isTrueLottie == 0){
+                    false_animation.setVisibility(View.GONE);
+                }
+                else{
+                    isTrueLottie =2;
+                }
             }
 
         }
@@ -265,22 +304,33 @@ public class InstrumentQuizStageActivity extends AppCompatActivity {
                  stt_view.setText(matches.get(i));
                  Log.d(tag,matches.get(i)+" and "+instName_arr[curValue]);
                  if(matches.get(i).equals(instName_arr[curValue])) {
+                     right_ans_num++;
                      isCorrect =true;
                      speech_button.setText("다음문제");
                      speech_button.setBackgroundColor(Color.parseColor("#7ADB6A"));
                      //true lottie
+                     true_animation = findViewById(R.id.lottie_true);
+                     true_animation.setAnimation("tickgreen.json");
+                     true_animation.setVisibility(View.VISIBLE);
+                     true_animation.playAnimation();
+                     true_animation.setRepeatCount(1);
                      //다음문제 버튼 생성
                      isNext = true;
-
+                     isTrueLottie = 1;
                  }
                  else {
                      isCorrect = false;
                      //false lottie;
-                     speech_button.setText("다시하기");
+                     false_animation = findViewById(R.id.lottie_false);
+                     false_animation.setAnimation("signforerrorflatstyle.json");
+                     false_animation.setVisibility(View.VISIBLE);
+                     false_animation.playAnimation();
+                     //false_animation.setScrollBarFadeDuration(1000);
+                     false_animation.setRepeatCount(1);
+                     isTrueLottie = 0;
                  }
              }
          }
-
 
          @Override
          public void onPartialResults(Bundle partialResults) {
@@ -292,47 +342,8 @@ public class InstrumentQuizStageActivity extends AppCompatActivity {
 
          }
        };
+
 }
-/*
-public static class RestAPITask extends AsyncTask<Integer, Void, Void> {
-    // Variable to store url
-    protected String mURL;
-
-    // Constructor
-    public RestAPITask(String url) {
-        mURL = url;
-    }
-
-    // Background work
-    protected Void doInBackground(Integer... params) {
-        String result = null;
-
-        try {
-            // Open the connection
-            URL url = new URL(mURL);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            InputStream is = conn.getInputStream();
-
-            // Get the stream
-            StringBuilder builder = new StringBuilder();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
-            }
-
-            // Set the result
-            result = builder.toString();
-        }
-        catch (Exception e) {
-            // Error calling the rest api
-            Log.e("REST_API", "GET method failed: " + e.getMessage());
-            e.printStackTrace();
-        }
-        return null;
-    }
-}*/
 
 
 class Task extends AsyncTask<String, Void, String> {

@@ -12,8 +12,9 @@
         android:layout_height="62dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/imhyeminbold"
-        android:text="다시 말하기"
+        android:text="다시 하기"
         android:textSize="8pt"
+        android:onClick="replayButton"
         app:backgroundTint="#FFD89C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,7 @@
         android:id="@+id/instResultTextView"
         android:layout_width="323dp"
         android:layout_height="260dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/rectangle_orange"
         android:fontFamily="@font/imhyeminbold"
         android:gravity="center_horizontal"
@@ -93,5 +94,29 @@
         app:layout_constraintEnd_toEndOf="@+id/instResultTextView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/instResultQuiztextView" />
+
+    <TextView
+        android:id="@+id/right_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="0"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/instResultScoretextView"
+        app:layout_constraintStart_toEndOf="@+id/instResultScoretextView"
+        app:layout_constraintTop_toTopOf="@+id/instResultScoretextView" />
+
+    <TextView
+        android:id="@+id/stage_nums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="3"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/instResultQuiztextView"
+        app:layout_constraintStart_toEndOf="@+id/instResultQuiztextView"
+        app:layout_constraintTop_toTopOf="@+id/instResultQuiztextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
