@@ -16,13 +16,13 @@
             android:id="@+id/textView23"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/minyo_title_img" />
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/minyo_fepeng" />
 
         <TextView
             android:id="@+id/text_1"
@@ -39,9 +39,9 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/bt1_1"
+                android:id="@+id/ggok_bt"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
@@ -59,9 +59,9 @@
                 app:strokeWidth="1dp" />
 
             <Button
-                android:id="@+id/bt1_2"
+                android:id="@+id/nil_bt"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
@@ -92,9 +92,9 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/bt2_1"
+            android:id="@+id/gang_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -112,9 +112,9 @@
             app:strokeWidth="1dp" />
 
         <Button
-            android:id="@+id/bt2_2"
+            android:id="@+id/jin_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -143,9 +143,9 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/bt3_1"
+            android:id="@+id/neo_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -163,9 +163,9 @@
             app:strokeWidth="1dp" />
 
         <Button
-            android:id="@+id/bt3_2"
+            android:id="@+id/oh_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -194,9 +194,9 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/bt4_1"
+            android:id="@+id/mong_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -214,9 +214,9 @@
             app:strokeWidth="1dp" />
 
         <Button
-            android:id="@+id/bt4_2"
+            android:id="@+id/hae_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -245,9 +245,9 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/bt5_1"
+            android:id="@+id/baet_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -265,9 +265,9 @@
             app:strokeWidth="1dp" />
 
         <Button
-            android:id="@+id/bt5_2"
+            android:id="@+id/mil_bt"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
