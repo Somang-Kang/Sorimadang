@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MinyoGameStage">
+
+    <ImageView
+        android:id="@+id/back_bt"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/stage_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@drawable/backward_arrow" />
+
+    <TextView
+        android:id="@+id/stage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/imhyeminbold"
+        android:text="stage"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/egg"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/egg" />
+
+    <TextView
+        android:id="@+id/egg_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="알을 누르면\n노래가 나와!"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/egg"
+        app:layout_constraintEnd_toEndOf="@+id/egg"
+        app:layout_constraintStart_toStartOf="@+id/egg" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:srcCompat="@drawable/namecard_peng" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:srcCompat="@drawable/namecard_peng" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:srcCompat="@drawable/namecard_peng" />
+
+    <TextView
+        android:id="@+id/name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView17"
+        app:layout_constraintStart_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="@+id/imageView17" />
+
+    <TextView
+        android:id="@+id/name_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+    <TextView
+        android:id="@+id/name_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+    <ImageView
+        android:id="@+id/broken_egg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/egg"
+        app:layout_constraintEnd_toEndOf="@+id/egg"
+        app:layout_constraintStart_toStartOf="@+id/egg"
+        app:layout_constraintTop_toTopOf="@+id/egg"
+        app:srcCompat="@drawable/broken_egg" />
+
+    <Button
+        android:id="@+id/replay_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="다시듣기"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/see_answer_bt" />
+
+    <Button
+        android:id="@+id/nextlevel_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="다음단계"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/see_answer_bt" />
+
+    <Button
+        android:id="@+id/see_answer_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="정답보기"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextlevel_bt"
+        app:layout_constraintStart_toEndOf="@+id/replay_bt"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+    <TextView
+        android:id="@+id/right_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFDDDD"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
