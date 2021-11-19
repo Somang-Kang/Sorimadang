@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.InstrumentQuizIntroActivity;
+import com.example.myapplication.MinyoGameStage;
 import com.example.myapplication.OXquizIntroActivity;
 import com.example.myapplication.R;
 
@@ -55,7 +56,8 @@ public class HomeFragment extends Fragment {
                         startActivity(intent1);
                         break;
                     case 2:
-                        Toast.makeText(getActivity(),"toast 2",Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(getActivity(), MinyoGameStage.class);
+                        startActivity(intent2);
                         break;
                     case 3:
                         Toast.makeText(getActivity(),"toast 3",Toast.LENGTH_SHORT).show();

@@ -53,28 +53,28 @@
         app:layout_constraintStart_toStartOf="@+id/egg" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/minyo_pen_1"
         android:layout_width="130dp"
         android:layout_height="150dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/minyo_pen_2"
         app:srcCompat="@drawable/namecard_peng" />
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/minyo_pen_3"
         android:layout_width="130dp"
         android:layout_height="150dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/minyo_pen_2"
         app:srcCompat="@drawable/namecard_peng" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/minyo_pen_2"
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView18"
-        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintEnd_toStartOf="@+id/minyo_pen_3"
+        app:layout_constraintStart_toEndOf="@+id/minyo_pen_1"
         app:layout_constraintTop_toBottomOf="@+id/egg"
         app:srcCompat="@drawable/namecard_peng" />
 
@@ -85,9 +85,9 @@
         android:layout_marginTop="80dp"
         android:text="TextView"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView17"
-        app:layout_constraintStart_toStartOf="@+id/imageView17"
-        app:layout_constraintTop_toTopOf="@+id/imageView17" />
+        app:layout_constraintEnd_toEndOf="@+id/minyo_pen_1"
+        app:layout_constraintStart_toStartOf="@+id/minyo_pen_1"
+        app:layout_constraintTop_toTopOf="@+id/minyo_pen_1" />
 
     <TextView
         android:id="@+id/name_2"
@@ -96,10 +96,10 @@
         android:layout_marginTop="80dp"
         android:text="TextView"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintEnd_toEndOf="@+id/minyo_pen_2"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+        app:layout_constraintStart_toStartOf="@+id/minyo_pen_2"
+        app:layout_constraintTop_toTopOf="@+id/minyo_pen_2" />
 
     <TextView
         android:id="@+id/name_3"
@@ -110,8 +110,8 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="@+id/imageView18"
-        app:layout_constraintTop_toTopOf="@+id/imageView18" />
+        app:layout_constraintStart_toStartOf="@+id/minyo_pen_3"
+        app:layout_constraintTop_toTopOf="@+id/minyo_pen_3" />
 
     <ImageView
         android:id="@+id/broken_egg"
@@ -124,39 +124,6 @@
         app:layout_constraintTop_toTopOf="@+id/egg"
         app:srcCompat="@drawable/broken_egg" />
 
-    <Button
-        android:id="@+id/replay_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="다시듣기"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/see_answer_bt" />
-
-    <Button
-        android:id="@+id/nextlevel_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="다음단계"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/see_answer_bt" />
-
-    <Button
-        android:id="@+id/see_answer_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:text="정답보기"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nextlevel_bt"
-        app:layout_constraintStart_toEndOf="@+id/replay_bt"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
-
     <TextView
         android:id="@+id/right_name_tv"
         android:layout_width="0dp"
@@ -166,9 +133,46 @@
         android:text="TextView"
         android:textSize="40sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView19"
-        app:layout_constraintEnd_toEndOf="@+id/imageView18"
-        app:layout_constraintStart_toStartOf="@+id/imageView17"
-        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+        app:layout_constraintBottom_toBottomOf="@+id/minyo_pen_2"
+        app:layout_constraintEnd_toEndOf="@+id/minyo_pen_3"
+        app:layout_constraintStart_toStartOf="@+id/minyo_pen_1"
+        app:layout_constraintTop_toTopOf="@+id/minyo_pen_2" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minyo_pen_2">
+
+        <Button
+            android:id="@+id/see_answer_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text="정답보기"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/nextlevel_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="다음단계"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

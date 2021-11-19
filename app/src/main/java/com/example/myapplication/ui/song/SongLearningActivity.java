@@ -72,7 +72,7 @@ public class SongLearningActivity extends AppCompatActivity {
             url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/gyeonggi/nilliriya.wav";
         }
         else if(song_num == 3){
-            minyo_name= "꼭두각시";
+            minyo_name= "강강술래";
             song_tv.setText(minyo_name);
             url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/namdo/Ganggangsullae.wav";
         }
@@ -159,6 +159,7 @@ public class SongLearningActivity extends AppCompatActivity {
                 replaceFragment(SongFragment);
             }
         });
+
 
 
 
