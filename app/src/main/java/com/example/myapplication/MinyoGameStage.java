@@ -13,6 +13,13 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+// 해야할 것
+// 정답로티, 오답로티 적용
+// 몇개 맞췄는지 그런거 넘겨주기
+// result 만들기
+// intro 만들기
+
+
 public class MinyoGameStage extends AppCompatActivity {
 
     TextView level_tv;
@@ -183,11 +190,11 @@ public class MinyoGameStage extends AppCompatActivity {
             public void onClick(View v) {
                 if(right_number == 1){
                     //정답로티
-                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
                 }
                 else{
                     //오답로티
-                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
                 }
                 right_name_tv.setVisibility(View.VISIBLE);
                 right_name_tv.setText(minyo_name[rand_num_real]);
@@ -204,11 +211,11 @@ public class MinyoGameStage extends AppCompatActivity {
             public void onClick(View v) {
                 if(right_number == 2){
                     //정답로티
-                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
                 }
                 else{
                     //오답로티
-                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
                 }
                 right_name_tv.setVisibility(View.VISIBLE);
                 right_name_tv.setText(minyo_name[rand_num_real]);
