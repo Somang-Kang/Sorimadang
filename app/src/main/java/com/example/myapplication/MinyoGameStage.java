@@ -50,8 +50,7 @@ public class MinyoGameStage extends AppCompatActivity {
         egg_intro = findViewById(R.id.egg_introduce);
         egg = findViewById(R.id.egg);
         broken_egg = findViewById(R.id.broken_egg);
-        right_name_tv = findViewById(R.id.right_name_tv);
-        right_ans_bt = findViewById(R.id.see_answer_bt);
+        right_name_tv = findViewById(R.id.right_ans_tv);
         nextlevel_bt = findViewById(R.id.nextlevel_bt);
         /*url[0] = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/gyeonggi/kkokdugaksi.wav";
         url[1] = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/gyeonggi/nilliriya.wav";
@@ -63,9 +62,12 @@ public class MinyoGameStage extends AppCompatActivity {
         url[7] = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/seodo/haejuarirang.wav";
         url[8] = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/dongbu/baennorae.wav";
         url[9] = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/dongbu/miryangarirang.wav";*/
+        right_name_tv.setVisibility(View.INVISIBLE);
 
-        Random random = new Random();
 
+
+
+        /*Random random = new Random();
         rand_num_real = random.nextInt(10) +1;//정답민요번호
         right_number = random.nextInt(3)+1;//정답문제번호
         rand_num1 = random.nextInt(10) + 1; //문제1 민요번호 랜덤 뽑기
@@ -93,13 +95,14 @@ public class MinyoGameStage extends AppCompatActivity {
         else { //정답을 무조건 넣어주는 방법
             ex_name2 = minyo_name[rand_num_real];
             right_number = 2;
-        }
-
+        }*/
+        setMinyo();
         game_1.setText(ex_name1);
         game_2.setText(ex_name2);
         game_3.setText(ex_name3);
+        right_name_tv.setText(right_name);
 
-        if(rand_num_real == 1){
+        /*if(rand_num_real == 1){
             right_name= "꼭두각시";
             right_name_tv.setText(right_name);
             url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/gyeonggi/kkokdugaksi.wav";
@@ -154,7 +157,7 @@ public class MinyoGameStage extends AppCompatActivity {
             right_name_tv.setText(right_name);
             url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/dongbu/miryangarirang.wav";
 
-        }
+        }*/
         egg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -173,14 +176,6 @@ public class MinyoGameStage extends AppCompatActivity {
                 egg_intro.setText("알을누르면\n노래가 나와!");
             }
         });
-        right_ans_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                right_name_tv.setVisibility(View.VISIBLE);
-                right_name_tv.setText(minyo_name[rand_num_real]);
-                nextlevel_bt.setBackgroundColor(Color.parseColor("#EC6767"));
-            }
-        });
 
         //egg_intro.setText(minyo_name[rand_num_real]);
         pen_1.setOnClickListener(new View.OnClickListener(){
@@ -194,6 +189,14 @@ public class MinyoGameStage extends AppCompatActivity {
                     //오답로티
                     Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
                 }
+                right_name_tv.setVisibility(View.VISIBLE);
+                right_name_tv.setText(minyo_name[rand_num_real]);
+                nextlevel_bt.setBackgroundColor(Color.parseColor("#EC6767"));
+                pen_1.setEnabled(false);
+                pen_2.setEnabled(false);
+                pen_3.setEnabled(false);
+                egg.setEnabled(false);
+                broken_egg.setEnabled(false);
             }
         });
         pen_2.setOnClickListener(new View.OnClickListener(){
@@ -207,6 +210,14 @@ public class MinyoGameStage extends AppCompatActivity {
                     //오답로티
                     Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
                 }
+                right_name_tv.setVisibility(View.VISIBLE);
+                right_name_tv.setText(minyo_name[rand_num_real]);
+                nextlevel_bt.setBackgroundColor(Color.parseColor("#EC6767"));
+                pen_1.setEnabled(false);
+                pen_2.setEnabled(false);
+                pen_3.setEnabled(false);
+                egg.setEnabled(false);
+                broken_egg.setEnabled(false);
             }
         });
         pen_3.setOnClickListener(new View.OnClickListener(){
@@ -220,11 +231,114 @@ public class MinyoGameStage extends AppCompatActivity {
                     //오답로티
                     Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
                 }
+                right_name_tv.setVisibility(View.VISIBLE);
+                right_name_tv.setText(minyo_name[rand_num_real]);
+                nextlevel_bt.setBackgroundColor(Color.parseColor("#EC6767"));
+                pen_1.setEnabled(false);
+                pen_2.setEnabled(false);
+                pen_3.setEnabled(false);
+                egg.setEnabled(false);
+                broken_egg.setEnabled(false);
+            }
+        });
+        nextlevel_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                right_name_tv.setVisibility(View.INVISIBLE);
+                nextlevel_bt.setBackgroundColor(Color.parseColor("#F7CAC9"));
+                setMinyo();
+                game_1.setText(ex_name1);
+                game_2.setText(ex_name2);
+                game_3.setText(ex_name3);
+                right_name_tv.setText(right_name);
+                pen_1.setEnabled(true);
+                pen_2.setEnabled(true);
+                pen_3.setEnabled(true);
+                egg.setEnabled(true);
+                broken_egg.setEnabled(true);
             }
         });
 
 
+    }
+    public void setMinyo(){
+        Random random = new Random();
+        rand_num_real = random.nextInt(10) +1;//정답민요번호
+        right_number = random.nextInt(3)+1;//정답문제번호
+        rand_num1 = random.nextInt(10) + 1; //문제1 민요번호 랜덤 뽑기
 
+        rand_num2 = rand_num1;
+        while(rand_num2 == rand_num1){
+            rand_num2 = random.nextInt(10) + 1;//문제2 민요번호 랜덤 뽑기
+        }
+        rand_num3 = rand_num2;
+        while(rand_num3 == rand_num1 || rand_num3 == rand_num2){
+            rand_num3 = random.nextInt(10) + 1;//문제3 민요번호 랜덤 뽑기
+        }
+        ex_name1 = minyo_name[rand_num1]; //문제1 뽑힌 번호의 민요이름 저장
+        ex_name2 = minyo_name[rand_num2];//문제2 뽑힌 번호의 민요이름 저장
+        ex_name3 = minyo_name[rand_num3];//문제3 뽑힌 번호의 민요이름 저장
+        if(rand_num1 == rand_num_real){
+            right_number = 1;
+        }
+        else if(rand_num2 == rand_num_real){
+            right_number = 2;
+        }
+        else if(rand_num3 == rand_num_real){
+            right_number = 3;
+        }
+        else { //정답을 무조건 넣어주는 방법
+            ex_name2 = minyo_name[rand_num_real];
+            right_number = 2;
+        }
+
+        if(rand_num_real == 1){
+            right_name= "꼭두각시";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/gyeonggi/kkokdugaksi.wav";
+        }
+        else if(rand_num_real == 2){
+            right_name= "닐리리야";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/gyeonggi/nilliriya.wav";
+        }
+        else if(rand_num_real == 3){
+            right_name= "강강술래";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/namdo/Ganggangsullae.wav";
+        }
+        else if(rand_num_real == 4){
+            right_name= "진도아리랑";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/namdo/jindoarirang.wav";
+        }
+        else if(rand_num_real == 5){
+            right_name= "너영나영";
+            right_name_tv.setText(right_name);
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/jeju/neoyeongnayeong.wav";
+
+        }
+        else if(rand_num_real == 6){
+            right_name= "오돌또기";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/jeju/odolttogi.wav";
+
+        }
+        else if(rand_num_real == 7){
+            right_name= "몽금포타령";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/seodo/monggeumpotaryeong.wav";
+
+        }
+        else if(rand_num_real == 8){
+            right_name= "해주아리랑";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/seodo/haejuarirang.wav";
+
+        }
+        else if(rand_num_real == 9){
+            right_name= "뱃노래";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/dongbu/baennorae.wav";
+
+        }
+        else if(rand_num_real == 10){
+            right_name= "밀양아리랑";
+            url = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/dongbu/miryangarirang.wav";
+
+        }
     }
 
     public void playAudio(){
