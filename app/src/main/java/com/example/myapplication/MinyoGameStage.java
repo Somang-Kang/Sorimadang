@@ -13,11 +13,9 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-// 해야할 것
 // 정답로티, 오답로티 적용
 // 몇개 맞췄는지 그런거 넘겨주기
 // result 만들기
-// intro 만들기
 
 
 public class MinyoGameStage extends AppCompatActivity {

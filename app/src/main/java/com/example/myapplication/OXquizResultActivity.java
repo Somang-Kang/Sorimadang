@@ -108,5 +108,9 @@ public class OXquizResultActivity extends AppCompatActivity {
 
     }
 
+    public void replayButton(View view) {
+        startActivity(new Intent(OXquizResultActivity.this, OXquizIntroActivity.class));
+    }
+
 
 }

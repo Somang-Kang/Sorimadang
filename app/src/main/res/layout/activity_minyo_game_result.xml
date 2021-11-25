@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OXquizResultActivity">
+    tools:context=".MinyoGameResult">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -13,27 +13,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:src="@drawable/backward_arrow"
-        android:onClick="replayButton"
-        app:layout_constraintBottom_toBottomOf="@+id/oxStage"
+        android:onClick="replayMinyoGame"
+        app:layout_constraintBottom_toBottomOf="@+id/minyoStage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/oxStage" />
+        app:layout_constraintTop_toTopOf="@+id/minyoStage" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="틀린문제\n공부하기"
-        android:fontFamily="@font/imhyeminbold"
-        android:textColor="#FF523F"
-        android:textSize="24sp"
-        app:cornerRadius="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/oxQuiz" />
 
     <TextView
-        android:id="@+id/oxStage"
+        android:id="@+id/minyoStage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -46,7 +33,7 @@
 
 
     <TextView
-        android:id="@+id/oxQuiz"
+        android:id="@+id/minyoGame"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_marginTop="32dp"
@@ -56,24 +43,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/nextLevel_button"
+        android:id="@+id/returnbt"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:text="다음단계\n게임하기"
         android:fontFamily="@font/imhyeminbold"
+        android:onClick="replayMinyoGame"
+        android:text="다시하기"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        app:backgroundTint="#8078BF"
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oxQuiz" />
+        app:layout_constraintTop_toBottomOf="@+id/minyoGame" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,20 +71,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="GAME FINISH!"
         android:fontFamily="@font/imhyeminregular"
-        android:textColor="#F87776"
+        android:textColor="#8078BF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oxStage" />
+        app:layout_constraintTop_toBottomOf="@+id/minyoStage" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -103,70 +92,51 @@
         android:fontFamily="@font/imhyeminregular"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/oxQuiz"
-        app:layout_constraintStart_toStartOf="@+id/oxQuiz"
-        app:layout_constraintTop_toTopOf="@+id/oxQuiz" />
+        app:layout_constraintEnd_toEndOf="@+id/minyoGame"
+        app:layout_constraintStart_toStartOf="@+id/minyoGame"
+        app:layout_constraintTop_toTopOf="@+id/minyoGame" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="점수"
         android:fontFamily="@font/imhyeminregular"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/oxQuiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="맞은 개수"
-        android:fontFamily="@font/imhyeminregular"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/oxQuiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/minyoGame"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="틀린 개수"
         android:fontFamily="@font/imhyeminregular"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/oxQuiz"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/minyoGame"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/tot_score"
+        android:id="@+id/correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/imhyeminregular"
-        app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView10" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/correct_num"
+        android:id="@+id/wrong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/imhyeminregular"
-        app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="@+id/tot_score"
-        app:layout_constraintStart_toStartOf="@+id/tot_score"
-        app:layout_constraintTop_toTopOf="@+id/textView11" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/correct"
+        app:layout_constraintStart_toStartOf="@+id/correct"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/wrong_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/imhyeminregular"
-        app:layout_constraintBottom_toBottomOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="@+id/correct_num"
-        app:layout_constraintStart_toStartOf="@+id/correct_num"
-        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
