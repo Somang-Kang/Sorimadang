@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -11,11 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.Random;
 
-// 정답로티, 오답로티 적용
 // 몇개 맞췄는지 그런거 넘겨주기
-// result 만들기
 
 
 public class MinyoGameStage extends AppCompatActivity {
@@ -28,16 +29,18 @@ public class MinyoGameStage extends AppCompatActivity {
     ImageView egg;
     ImageView broken_egg;
     ImageView pen_1,pen_2,pen_3;
-    Button right_ans_bt;
     Button nextlevel_bt;
     private MediaPlayer player;
     private int position = 0;
     String url;
     int rand_num_real,right_number,rand_num1,rand_num2,rand_num3;
+    int quiz_num, correct_num, wrong_num;
     String right_name;
     TextView right_name_tv;
     String ex_name1,ex_name2,ex_name3;
     String[] minyo_name = {"NULL","꼭두각시","닐리리야","꼭두각시","진도아리랑","너영나영","오돌또기","몽금포타령","해주아리랑","뱃노래","밀양아리랑"};
+    LottieAnimationView true_animation, false_animation;
+    boolean isTrueLottie;
 
 
     @Override
@@ -69,8 +72,7 @@ public class MinyoGameStage extends AppCompatActivity {
         url[9] = "https://s3.ap-northeast-2.amazonaws.com/sorimadang.shop/dongbu/miryangarirang.wav";*/
         right_name_tv.setVisibility(View.INVISIBLE);
 
-
-
+        isTrueLottie = false;
 
         /*Random random = new Random();
         rand_num_real = random.nextInt(10) +1;//정답민요번호
@@ -187,12 +189,28 @@ public class MinyoGameStage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(right_number == 1){
+                    correct_num++;
+
                     //정답로티
-//                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
+                    true_animation = findViewById(R.id.lottie_true);
+                    true_animation.setAnimation("tickgreen.json");
+                    true_animation.setVisibility(View.VISIBLE);
+                    true_animation.playAnimation();
+                    true_animation.setRepeatCount(1);
+                    isTrueLottie = true;
                 }
                 else{
+                    wrong_num++;
                     //오답로티
-//                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
+                    false_animation = findViewById(R.id.lottie_false);
+                    false_animation.setAnimation("signforerrorflatstyle.json");
+                    false_animation.setVisibility(View.VISIBLE);
+                    false_animation.playAnimation();
+                    //false_animation.setScrollBarFadeDuration(1000);
+                    false_animation.setRepeatCount(1);
+                    isTrueLottie = false;
+
+
                 }
                 right_name_tv.setVisibility(View.VISIBLE);
                 right_name_tv.setText(minyo_name[rand_num_real]);
@@ -208,12 +226,27 @@ public class MinyoGameStage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(right_number == 2){
+                    correct_num++;
+
                     //정답로티
-//                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
+                    true_animation = findViewById(R.id.lottie_true);
+                    true_animation.setAnimation("tickgreen.json");
+                    true_animation.setVisibility(View.VISIBLE);
+                    true_animation.playAnimation();
+                    true_animation.setRepeatCount(1);
+                    isTrueLottie = true;
                 }
                 else{
+                    wrong_num++;
+
                     //오답로티
-//                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
+                    false_animation = findViewById(R.id.lottie_false);
+                    false_animation.setAnimation("signforerrorflatstyle.json");
+                    false_animation.setVisibility(View.VISIBLE);
+                    false_animation.playAnimation();
+                    //false_animation.setScrollBarFadeDuration(1000);
+                    false_animation.setRepeatCount(1);
+                    isTrueLottie = false;
                 }
                 right_name_tv.setVisibility(View.VISIBLE);
                 right_name_tv.setText(minyo_name[rand_num_real]);
@@ -229,12 +262,27 @@ public class MinyoGameStage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(right_number == 3){
+
+                    correct_num++;
                     //정답로티
-                    Toast.makeText(getApplicationContext(),"정답", Toast.LENGTH_LONG).show();
+                    true_animation = findViewById(R.id.lottie_true);
+                    true_animation.setAnimation("tickgreen.json");
+                    true_animation.setVisibility(View.VISIBLE);
+                    true_animation.playAnimation();
+                    true_animation.setRepeatCount(1);
+                    isTrueLottie = true;
+
                 }
                 else{
+                    wrong_num++;
                     //오답로티
-                    Toast.makeText(getApplicationContext(),"오답", Toast.LENGTH_LONG).show();
+                    false_animation = findViewById(R.id.lottie_false);
+                    false_animation.setAnimation("signforerrorflatstyle.json");
+                    false_animation.setVisibility(View.VISIBLE);
+                    false_animation.playAnimation();
+                    //false_animation.setScrollBarFadeDuration(1000);
+                    false_animation.setRepeatCount(1);
+                    isTrueLottie = false;
                 }
                 right_name_tv.setVisibility(View.VISIBLE);
                 right_name_tv.setText(minyo_name[rand_num_real]);
@@ -249,6 +297,16 @@ public class MinyoGameStage extends AppCompatActivity {
         nextlevel_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(isTrueLottie == true){
+                    true_animation.setVisibility(View.GONE);
+                }
+                else if(isTrueLottie == false){
+                    false_animation.setVisibility(View.GONE);
+                }
+                else{
+
+                }
+
                 right_name_tv.setVisibility(View.INVISIBLE);
                 nextlevel_bt.setBackgroundColor(Color.parseColor("#F7CAC9"));
                 setMinyo();
@@ -261,8 +319,20 @@ public class MinyoGameStage extends AppCompatActivity {
                 pen_3.setEnabled(true);
                 egg.setEnabled(true);
                 broken_egg.setEnabled(true);
+
+                quiz_num++;
+                if (quiz_num > 3){
+                    nextlevel_bt.setText("결과보기");
+                }
+//                if (quiz_num > 4){
+//                    Intent minyoIntent = new Intent(MinyoGameStage.this, MinyoGameResult.class);
+//                    minyoIntent.putExtra("correct",correct_num);
+//                    minyoIntent.putExtra("wrong",wrong_num);
+//                    startActivity(minyoIntent);
+//                }
             }
         });
+
 
 
     }
@@ -385,4 +455,5 @@ public class MinyoGameStage extends AppCompatActivity {
             player = null;
         }
     }
+
 }

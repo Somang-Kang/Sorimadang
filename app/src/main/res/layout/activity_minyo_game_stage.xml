@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MinyoGameStage">
 
-    <ImageView
-        android:id="@+id/back_bt"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/stage_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/backward_arrow" />
 
     <TextView
         android:id="@+id/stage_tv"
@@ -151,6 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/minyo_pen_2"
         app:layout_constraintVertical_bias="0.476" />
 
+
     <TextView
         android:id="@+id/right_ans_tv"
         android:layout_width="200dp"
@@ -164,5 +156,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_true"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stage_tv"
+        app:lottie_loop="false" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_false"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stage_tv"
+        app:lottie_loop="false" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
