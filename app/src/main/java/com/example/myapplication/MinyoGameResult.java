@@ -20,12 +20,12 @@ public class MinyoGameResult extends AppCompatActivity {
         correct = findViewById(R.id.correct);
         wrong = findViewById(R.id.wrong);
 
-        Intent getIntent = getIntent();
-        correct_num = getIntent.getIntExtra("correct",0);
-        wrong_num = getIntent.getIntExtra("wrong",0);
+        Intent getMinyoIntent = getIntent();
+        correct_num = getMinyoIntent.getIntExtra("correct",0);
+        wrong_num = getMinyoIntent.getIntExtra("wrong",0);
 
-        correct.setText(correct_num);
-        wrong.setText(wrong_num);
+        correct.setText(String.valueOf(correct_num));
+        wrong.setText(String.valueOf(wrong_num));
 
 
     }

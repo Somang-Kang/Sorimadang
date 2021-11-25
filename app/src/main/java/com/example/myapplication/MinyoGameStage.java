@@ -16,7 +16,7 @@ import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.Random;
 
-// 몇개 맞췄는지 그런거 넘겨주기
+// 몇개 맞췄는지 그런거 넘겨주기 -> 왜 에러나
 
 
 public class MinyoGameStage extends AppCompatActivity {
@@ -324,12 +324,13 @@ public class MinyoGameStage extends AppCompatActivity {
                 if (quiz_num > 3){
                     nextlevel_bt.setText("결과보기");
                 }
-//                if (quiz_num > 4){
-//                    Intent minyoIntent = new Intent(MinyoGameStage.this, MinyoGameResult.class);
-//                    minyoIntent.putExtra("correct",correct_num);
-//                    minyoIntent.putExtra("wrong",wrong_num);
-//                    startActivity(minyoIntent);
-//                }
+                if (quiz_num > 4){
+//                    Toast.makeText(getApplicationContext(), "결과"+correct_num+","+wrong_num,Toast.LENGTH_SHORT).show();
+                    Intent minyoIntent = new Intent(MinyoGameStage.this, MinyoGameResult.class);
+                    minyoIntent.putExtra("correct",correct_num);
+                    minyoIntent.putExtra("wrong",wrong_num);
+                    startActivity(minyoIntent);
+                }
             }
         });
 

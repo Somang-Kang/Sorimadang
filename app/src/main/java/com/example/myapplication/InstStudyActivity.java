@@ -55,6 +55,7 @@ public class InstStudyActivity extends AppCompatActivity implements TextToSpeech
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inst_study);
+        getSupportActionBar().hide();
 
         akgi = findViewById(R.id.instStudyTextView1); //악기이름
         //ghtWhat = findViewById(R.id.instStudyTextView2); //악기종류

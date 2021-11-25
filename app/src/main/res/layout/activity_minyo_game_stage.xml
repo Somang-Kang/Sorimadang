@@ -15,6 +15,7 @@
         android:fontFamily="@font/imhyeminbold"
         android:text="stage"
         android:textSize="22sp"
+        android:textColor="#8078BF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -136,6 +137,7 @@
         android:layout_weight="1"
         android:text="다음단계"
         android:textSize="18sp"
+        app:backgroundTint="#8078BF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
