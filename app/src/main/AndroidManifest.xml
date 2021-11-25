@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MinyoGameIntro"
+            android:exported="true" />
+        <activity
             android:name=".MinyoGameStage"
             android:exported="true" />
         <activity
