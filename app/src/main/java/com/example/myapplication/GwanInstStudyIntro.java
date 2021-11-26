@@ -25,6 +25,7 @@ public class GwanInstStudyIntro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gwan_inst_study_intro);
+        getSupportActionBar().hide();
 
         img1=findViewById(R.id.G_imageView);
         img2=findViewById(R.id.G_imageView2);

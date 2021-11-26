@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">instrument</string>
+    <string name="title_notifications">Minyo</string>
     <string name="title_mypage">My Page</string>
 
     <string name="intro_message">안녕, 만나서 반가워!\n

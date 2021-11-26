@@ -60,9 +60,9 @@ public class InstrumentFragment extends Fragment {
         }.start();
 
         ListviewComponents = new ArrayList<>();
-        ListviewComponents.add(new ListviewComponent2("관악기", "14",R.drawable.janggu , Color.parseColor("#DADADA")));
-        ListviewComponents.add(new ListviewComponent2("현악기", "8", R.drawable.oxquiz,Color.parseColor("#F8F8F8")));
-        ListviewComponents.add(new ListviewComponent2("타악기", "8", R.drawable.musicnotes,Color.parseColor("#DADADA")));
+        ListviewComponents.add(new ListviewComponent2("관악기", "14",R.drawable.dangpiri , Color.parseColor("#F3F8FF")));
+        ListviewComponents.add(new ListviewComponent2("현악기", "8", R.drawable.jeongakgayageum,Color.parseColor("#FFFFFF")));
+        ListviewComponents.add(new ListviewComponent2("타악기", "8", R.drawable.janggu2,Color.parseColor("#F3F8FF")));
 
         customListView2 = (ListView) root.findViewById(R.id.main_listview);
         instAdapter = new InstAdapter(getContext(),ListviewComponents);

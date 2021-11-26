@@ -25,6 +25,7 @@ public class TaInstStudyIntro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ta_inst_study_intro);
+        getSupportActionBar().hide();
 
         img1=findViewById(R.id.T_imageView);
         img2=findViewById(R.id.T_imageView2);

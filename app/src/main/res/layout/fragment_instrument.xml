@@ -8,30 +8,29 @@
     tools:context=".ui.Instrument.InstrumentFragment" >
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="401dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/imhyeminbold"
-        android:gravity="center"
-        android:text="국악기 학습"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/gugakgi_title_img" />
 
     <ListView
         android:id="@+id/main_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:fontFamily="@font/imhyeminregular"
+        android:fontFamily="@font/imhyeminbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/all_game" />
 
