@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">소리마당</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">instrument</string>
     <string name="title_notifications">Minyo</string>
